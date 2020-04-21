@@ -1,0 +1,14 @@
+{
+  "name": "tensorschool00",
+  "version": "1.0.0",
+  "description": "test repo",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Alexei Markov",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
