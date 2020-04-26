@@ -1,20 +1,19 @@
 hr { 
 	width: 150px; 
-	margin: 20px auto;
+	margin: 25px auto;
 	height:2px; 
 	background: black; 
 }
 
 body {
 	text-align: center; 
-	font-size:18px; 
+	font-size:20px; 
 	font-family: Tahoma, Geneva, Verdana, sans-serif
 }
 
 #wraper {
-	max-width: 900px; 
+	max-width: 1000px;
 	margin: 0 auto;
-	width: 900px;
 }
 
 header {
@@ -31,11 +30,11 @@ header span {
 }
 
 header p {
-	margin-top: 30px;
+	margin: 50px 0px 60px 0px;
 }
 
 .people div {
-	margin-bottom: 10px;
+	margin-bottom: 20px;
 	width: 30%; 
 	display:inline-block;
 }
@@ -50,7 +49,7 @@ header p {
 .people span {
 	font-size: 0.8em;
 	display: block;
-	margin: 10px 0px 15px;
+	margin: 5px 0px 15px;
 	opacity: 0.5;
 }
 
