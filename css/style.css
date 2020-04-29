@@ -1,0 +1,230 @@
+.wrapper {
+	display: grid;
+	grid-template-columns: repeat(12, 1fr);
+}
+
+body {
+	padding: 10px; 
+	max-width: 1320px;
+	background: gray;
+	font-family: Roboto;
+	font-style: normal;
+}
+  
+.wrapper > * {
+	padding: 10px;
+}
+
+/*настройка стилей для lesson_wrapper*/
+.lesson_wrapper {
+	grid-column: span 10;
+	background: white;
+	display: flex;
+	justify-content: space-around;
+	align-content: flex-start;
+	flex-wrap: wrap;
+	align-items: center;
+}
+
+.lesson_page {
+	height: 300px;
+	width: 200px;
+	background: #F3F3F3;
+	border-radius: 10%;
+	border: 3px solid #F3F3F3;
+	margin: 20px 20px;/**/
+}
+
+
+.lesson_page_logo{ /*сдвинуть на 3px влево*/
+	width: 201px;
+}
+
+.lesson_page_info_title{ /*нормально ли сделать его двумя <p>*/
+	font-weight: normal;
+	font-size: 12px;
+	color: #464646;
+	margin-left: 10px;/**/
+	line-height: 14px;
+	margin-bottom: 13px;
+}
+
+.lesson_page_footer{
+	height: 26px;
+	width: 206px;
+	background: #DCDCDC;
+	text-align: center;
+	margin-left: -3px;/**/
+	font-weight: 500;
+	font-size: 16px;
+	line-height: 19px;
+}
+
+.lesson_page_footer_label{
+	margin-top: 5px;
+	padding-top: 3px;
+}
+
+
+
+.lesson_page_title {
+	font-weight: 500;
+	margin-left: 10px;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	margin-bottom: 2px;
+	color: #464646;
+}
+
+.lesson_page_date{
+	font-weight: normal;
+	font-size: 10px;
+	margin-left: 10px;
+	margin-top: 0px;
+	opacity: 0.5;
+}
+
+.lesson_page_footer_border{
+	border-radius: 0px 0px 10px 10px;
+}
+
+.show_more{
+	padding-top: 10px;
+	height: 30px;
+	width: 200px;
+	background:#37ABFF;
+	font-weight: 500;
+	font-size: 18px;
+	line-height: 21px;
+	text-align: center;
+	text-transform: uppercase;
+	color: #FFFFFF;
+	border-radius: 8px;
+}
+/*конец настройки стилей для lesson_page*/
+
+/*настройка стилей для aside*/
+.aside {
+	grid-column: span 2;
+	background: #EDEDED;
+	
+	/*display: flex;
+	align-content: flex-start;*/ /*выравнивание с помощью flex*/
+}
+
+.aside_option{
+	text-overflow: ellipsis;
+	padding: 10px;
+	font-weight: normal;
+	font-size: 18px;
+	line-height: 21px;	
+}
+
+.aside_option:hover{
+	background: #DCDCDC;
+}
+/*конец настройки стилей для aside*/
+
+/*настройка стилей для header*/
+.header {
+	display: flex;
+	grid-column: span 12;
+	background: #37ABFF;
+	padding-right: 40px;
+}
+
+.header_title{
+	font-weight: 500;
+	font-size: 22px;
+	line-height: 28px;
+	color: #FFFFFF;
+	margin-left: 10px;/*как заменить эти 2 margin через flex ы*/
+	margin-top: 15px;
+}
+
+.header_title_round{
+	border-radius: 50%;
+	background-color: #59B9FF;
+	height: 35px;
+	width: 35px;
+	margin-left: 20px;/*как заменить эти 2 margin через flex ы*/
+	margin-top: 10px;
+	padding: 3px;
+	border: 1px solid transparent;
+}
+
+.header_title_round:hover{
+	border: 1px solid darkblue;
+}
+
+.header_spacer {
+	flex-grow: 1;
+}
+/*конец настройки стилей для header*/
+
+
+/*настройка стилей для footer*/
+.footer {
+	display: flex;
+	grid-column: span 12;
+	background: #3C3C3C;
+	font-size: 14px;
+	line-height: 16px;
+	color: #FFFFFF
+}
+
+.footer_spacer{
+	/*flex-grow: 1;*/
+}
+
+.footer_info{
+	margin-top: 7px;
+	padding-left: 10px;
+	padding-right: 10px;
+}
+
+/*конец настройки стилей для footer*/
+
+@media screen and (max-width: 900px) {
+	.header {
+	  justify-content: space-around;
+	}
+	.header_spacer {
+	  flex-grow: 0;
+	}
+	.aside{
+		display: flex;
+		flex-direction: row;
+		justify-content: space-around;
+		grid-column: span 12;
+		height: 80px;
+	}
+	.lesson_wrapper{
+		grid-column: span 12;
+	}
+
+	.header {
+		grid-column: span 12;
+		background: #37ABFF;
+	}
+
+	.aside {
+		grid-column: span 12;
+	}
+
+	.aside_option{
+		height: 40px;
+		margin-top: 10px;
+		align-content: space-around;
+		align-items: center;
+		white-space: normal;
+		text-overflow: ellipsis;
+		padding: 10px;
+		font-weight: normal;
+		font-size: 18px;
+		line-height: 21px;	
+		
+	}
+}
+
