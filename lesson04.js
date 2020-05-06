@@ -36,9 +36,9 @@ console.log(arr3);
 
 
 function average(arr) {
-    while (k < 100) {
-        sum += arr[k];
-        k++;
+    while (i < 100) {
+        sum += arr[i];
+        i++;
     }
     return sum / arr.length;
 }
