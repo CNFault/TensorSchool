@@ -8,8 +8,7 @@ class Student {
     }
 
     get age() {
-        const y = new Date(); //Создаёт объект Date с текущей датой и временем:
-        return y.getFullYear() - this.birthYear; //Для доступа к компонентам даты-времени объекта Date используется  метод getFullYear() - Получить год (из 4 цифр)
+        return new Date().getFullYear() - this.birthYear; //Для доступа к компонентам даты-времени объекта Date используется  метод getFullYear() - Получить год (из 4 цифр)
     }
     get education() {
         return `${this.university} ${this.course}`;
