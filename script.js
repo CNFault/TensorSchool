@@ -8,7 +8,8 @@ class Student {
     }
 
     get age() {
-        return new Date().getFullYear() - this.birthYear;
+        const y = new Date(); //Создаёт объект Date с текущей датой и временем:
+        return y.getFullYear() - this.birthYear; //Для доступа к компонентам даты-времени объекта Date используется  метод getFullYear() - Получить год (из 4 цифр)
     }
     get education() {
         return `${this.university} ${this.course}`;
@@ -17,9 +18,7 @@ class Student {
         const div = document.createElement('div');
         div.className = 'student';
         div.innerHTML =
-            '<img src=".' + this.photoUrl + '" alt="Аватар 1" title="Аватар 1" />' +
-            '<p title="Фамилия Имя">' + this.fullName + '</p>' +
-            '<span title="ВУЗ Курс">' + this.education + ' курс' + '</span>';
+            `<img src=".${this.photoUrl}" alt="Аватар 1" title="Аватар 1" /><p title="Фамилия Имя">${this.fullName}</p><span title="ВУЗ Курс">${this.education} курс</span>`;
         document.body.appendChild(div);
 
         div.addEventListener('click', () => {
@@ -84,11 +83,8 @@ studentArr.forEach((item) => {
 const openCard = (student) => {
     const popup = document.querySelector('.popup');
     const content = document.querySelector('.content');
-    content.innerHTML = '<div><img class="minImg" src=".' + student.photoUrl +
-        '" alt="Аватар" title="Аватар" /></div>' + '<p title="Фамилия Имя">' + student.fullName + ' </p>' +
-        '<span title="Dозраст">' + student.age + ' лет' + '</span>';
+    content.innerHTML = `<div><img class="minImg" src=".${student.photoUrl}" alt="Аватар" title="Аватар" /></div><p title="Фамилия Имя">${student.fullName} </p><span title="Возраст">${student.age} лет</span>`;
     popup.style.display = 'block';
-
 
     const close = document.querySelector('.close');
     close.addEventListener('click', (event) => {
