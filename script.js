@@ -43,35 +43,35 @@ const studentArr = [
         university: 'НГТУ',
         course: 3,
         photoUrl: '/img/ava02.jpg',
-        birthDate: '2001'
+        birthYear: 2001
     },
     {
         fullName: 'Кристина Сидорова',
         university: 'НГАСУ',
         course: 1,
         photoUrl: '/img/ava03.jpg',
-        birthDate: 1998
+        birthYear: 1998
     },
     {
         fullName: 'Андрей Молотов',
         university: 'НГАХА',
         course: 5,
         photoUrl: '/img/ava04.jpg',
-        birthDate: 1990
+        birthYear: 1990
     },
     {
         fullName: 'Ирина Васильева',
         university: 'НГУ',
         course: 4,
         photoUrl: '/img/ava05.jpg',
-        birthDate: 1992
+        birthYear: 1992
     },
     {
         fullName: 'Николай Дроздов',
         university: 'ЮУРГУ',
         course: 2,
         photoUrl: '/img/ava06.jpg',
-        birthDate: 2003
+        birthYear: 2003
     },
 ];
 
