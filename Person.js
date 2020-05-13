@@ -17,7 +17,6 @@ class Person {
 
     static idCounter = 1
 
-
     render() {
         const div = document.createElement('div');
         div.className = 'student';
@@ -27,14 +26,10 @@ class Person {
             openCard(this);
         });
         return div;
-
     }
-
-
 
     mount(element) {
         const div = this.render();
         element.appendChild(div);
     }
 }
-//один файл один класс <-->
