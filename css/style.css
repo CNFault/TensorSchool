@@ -107,3 +107,39 @@ div.popup{
 	height: 80px; 
 	object-fit: cover; 
 }
+
+
+.teacher {
+	margin-bottom: 20px;
+	width: 300px;
+	display:inline-block;
+}
+
+.teacher img {
+	width:200px;
+	height: 200px; 
+	object-fit: cover; 
+	border-radius: 50%;
+}
+
+.teacher span {
+	font-size: 0.8em;
+	display: block;
+	margin: 5px 0px 0px;
+	opacity: 0.5;
+	padding-bottom: 15px;
+}
+
+.teacher p {
+	margin: 5px 50px 0px;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	display: block;
+}
+
+.teacher:hover {	
+	-webkit-box-shadow: 5px 5px 3px 1px rgba(50, 50, 50, 0.75);
+	-moz-box-shadow:    5px 5px 3px 1px rgba(50, 50, 50, 0.75);
+	box-shadow: 5px 5px 3px 1px rgba(50, 50, 50, 0.75);
+}
