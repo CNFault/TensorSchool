@@ -1,7 +1,7 @@
 import { Person } from './Person.js';
 
 export class Teacher extends Person {
-    constructor(name, surname, photoUrl, birthYear, expirience, position) {
+    constructor(name, surname, photoUrl, birthYear, course, expirience, position) {
         super(name, surname, photoUrl, birthYear);
         this.type = 'Преподаватель';
         this.expirience = expirience;

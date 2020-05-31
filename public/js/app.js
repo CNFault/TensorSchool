@@ -59,14 +59,9 @@ class Data {
 
 let data = new Data({
     object: 'person',
-    model: PersonFactory
 })
 
-/*
-data.read(1).then(result => { console.log(result) });*/
-
 data.getAll().then(personList => {
-    console.log(personList);
     personList.forEach((data) => {
         school.enroll(data.type, data);
     });
