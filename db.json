@@ -2,71 +2,48 @@
   "person": [
     {
       "id": 1,
-      "name": "Алексей",
-      "type": "Студент",
-      "surname": "Шипелкин",
-      "photoUrl": "img/ava01.jpg",
-      "study": "НГТУ",
-      "birthYear": 1990,
-      "course": 3,
-      "expirience": null,
-      "position": null
-    },
-    {
-      "id": 2,
-      "name": "Мария",
-      "surname": "Фёдорова",
-      "type": "Студент",
-      "photoUrl": "img/ava02.jpg",
-      "study": "НГТУ",
-      "birthYear": 1995,
-      "course": 2,
-      "expirience": null,
-      "position": null
+      "title": "Миша Петров",
+      "photo": "img/ava01.jpg",
+      "study": "Угату",
+      "bday": "2000-05-01T00:00:00.000Z",
+      "phone": "+7 (963) 123-45-67",
+      "active": "2020-04-11T18:01:47.339Z"
     },
     {
       "id": 3,
-      "name": "Кристина",
-      "surname": "Сидорова",
-      "type": "Преподаватель",
-      "photoUrl": "img/ava03.jpg",
-      "birthYear": 1993,
-      "expirience": 4,
-      "position": "Доцент"
+      "title": "Женя Серова",
+      "photo": "img/ava03.jpg",
+      "study": "Угату",
+      "bday": "1998-11-13T00:00:00.000Z",
+      "phone": "+7 (963) 123-45-67",
+      "active": "2020-04-03T15:00:00.000Z"
     },
     {
       "id": 4,
-      "name": "Андрей",
-      "surname": "Молотов",
-      "type": "Преподаватель",
-      "photoUrl": "img/ava04.jpg",
-      "birthYear": 1995,
-      "expirience": 5,
-      "position": "Доцент"
+      "title": "Вася Васильев",
+      "photo": "img/ava04.jpg",
+      "study": "Угату",
+      "bday": "2000-05-01T00:00:00.000Z",
+      "phone": "+7 (963) 123-45-67",
+      "active": "2020-04-11T18:01:47.340Z"
     },
     {
       "id": 5,
-      "name": "Ирина",
-      "type": "Студент",
-      "surname": "Васильева",
-      "photoUrl": "img/ava05.jpg",
-      "study": "НГТУ",
-      "birthYear": 1995,
-      "course": 3,
-      "expirience": null,
-      "position": null
+      "title": "Вика Цукерберг",
+      "photo": "img/ava05.jpg",
+      "study": "БГПУ",
+      "bday": "2001-02-08T00:00:00.000Z",
+      "phone": "+7 (963) 123-45-67",
+      "active": "2020-03-05T15:00:00.000Z"
     },
     {
       "id": 6,
-      "name": "Николай",
-      "type": "Студент",
-      "surname": "Дроздов",
-      "photoUrl": "img/ava06.jpg",
-      "study": "НГТУ",
-      "birthYear": 1991,
-      "course": 5,
-      "expirience": null,
-      "position": null
+      "title": "Дедя Федор Илынбаев",
+      "photo": "img/ava06.jpg",
+      "study": "",
+      "bday": "1974-07-24T00:00:00.000Z",
+      "phone": "+7 (963) 123-45-67",
+      "active": "2020-04-03T15:00:00.000Z"
     }
   ]
 }

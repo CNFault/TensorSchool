@@ -22,7 +22,6 @@ class Data {
         return fetch(url, options).then(
             response => response.json()
         );
-
     }
 
 

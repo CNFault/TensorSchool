@@ -1,21 +1,28 @@
 <!DOCTYPE html>
-<html lang="ru">
-
+<html>
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <script type="module" src="js/app.js" defer></script>
-    <title>Tensor School</title>
-    <link rel="stylesheet" href="css/style.css">
+  <!-- добавим стили mocha для отображения результатов -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/mocha/3.2.0/mocha.css">
+  <!-- добавляем сам фреймворк mocha -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/mocha/3.2.0/mocha.js"></script>
+  <script>
+    // включаем режим тестирования в стиле BDD
+    mocha.setup('bdd');
+  </script>
+  <!-- добавим chai -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/chai/3.5.0/chai.js"></script>
+  <script>
+    // chai предоставляет большое количество функций. Объявим assert глобально
+    let assert = chai.assert;
+  </script>
+
+    <!-- скрипт со спецификацией (describe, it...) -->
+    <script type="module" src="test.js" defer></script>
 </head>
 
 <body>
-    <div id="app"></div>
-
-    <div class="popup">
-        <div class="close">&times;</div>
-        <div class="content"></div>
-    </div>
+  <!-- элемент с id="mocha" будет содержать результаты тестов -->
+  <div id="mocha"></div>
 </body>
 
 </html>
