@@ -1,5 +1,9 @@
 import Component from '../js/Component.js';
 import { PersonFactory } from '../js/PersonFactory.js';
+import { Person } from '../js/Person.js';
+import { Teacher } from '../js/Teacher.js';
+import { Student } from '../js/Student.js';
+
 
 
 
@@ -44,17 +48,25 @@ describe("Тест", function () {
         });
     });
 
-    describe("Тест класса Person ", function () {
+    describe("Тест класса PersonFactory ", function () {
 
-        it('Тест класса Person', function () {
+        it('Тест класса PersonFactory', function () {
             // arrange
             let props = {};
 
             // act
             let pf = new PersonFactory({ props });
+            const student = pf.create('Студент');
+            const teacher = pf.create('Преподаватель');
+            const person = pf.create('');
+
+
 
             //assert
             assert(pf instanceof PersonFactory);
+            assert(student instanceof Student);
+            assert(teacher instanceof Teacher);
+            assert(person instanceof Person);
         });
     });
 });
