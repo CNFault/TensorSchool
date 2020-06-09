@@ -31,7 +31,7 @@
       "type": "Преподаватель",
       "photoUrl": "img/ava03.jpg",
       "birthYear": 1993,
-      "expirience": 4,
+      "expirience": 7,
       "position": "Доцент"
     },
     {
@@ -42,7 +42,7 @@
       "photoUrl": "img/ava04.jpg",
       "birthYear": 1995,
       "expirience": 5,
-      "position": "Доцент"
+      "position": "Профессор"
     },
     {
       "id": 5,

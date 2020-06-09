@@ -4,23 +4,12 @@ import React from 'react';
 export class School extends React.Component {
     constructor(props) {
         super(props);
-        this.persons = [];
-        this.pf = new PersonFactory;
-    }
-    enroll(type, args) {
-        const person = this.pf.create(type, args.name, args.surname, args.photoUrl, args.birthYear, args.course, args.expirience, args.position);
-        this.persons.push(person);
-    }
-    dismiss(person) {
-        const index = this.persons.indexOf(person);
-        this.persons.splice(index, 1);
-    }
-    search(name) {
-        return this.persons.filter(person => person.name === name);
+        this.pf = new PersonFactory();
     }
 
     render() {
         const persons = this.props.persons.map(person => this.pf.create(person));
+
         return (<div>
             <div id="wraper">
                 <header>

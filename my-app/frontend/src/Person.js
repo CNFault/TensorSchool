@@ -34,29 +34,5 @@ export class Person extends React.Component {
 
     clickHandler() {
         ReactDOM.render(<Popup user={this} />, document.querySelector("#popupPlace"))
-        //     const popup = document.querySelector('.popup');
-        //     const content = document.querySelector('.content');
-        //     content.innerHTML = `<div><img class="minImg" src="${this.photoUrl}" alt="Аватар" title="Аватар" 
-        //     /></div><p> ${this.status} </p><span title="Возраст">${this.age} лет</span>`;
-        //     popup.style.display = 'block';
-
-        //     const close = document.querySelector('.close');
-        //     close.addEventListener('click', (event) => {
-        //         popup.style.display = 'none';
-        //     });
-        // }
-        // const popup = (
-        //     <div className="popup" style={{ display: "block" }}>
-        //         <div className="close" onClick={e => document.querySelector('.popup').style.display = "none"}>&times;</div>
-        //         <div className="content">
-        //             <div>
-        //                 <img className="minImg" src={this.photoUrl} alt="Аватар" title="Аватар" />
-        //             </div>
-        //             <p>{this.status} </p><span title="Возраст">{this.age} лет</span>
-        //         </div>
-        //     </div>
-        // )
-
-        // ReactDOM.render(popup, document.getElementById('popupPlace'));
     }
 }

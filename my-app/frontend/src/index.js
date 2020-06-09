@@ -6,22 +6,11 @@ import { Data } from './Data.js';
 
 let persons = [];
 
-// class Application extends React.Component {
-//     render() {
-//         return <School persons={persons} />;
-//     }
-// }
-
-// ReactDOM.render(
-//     <Application />,
-//     document.getElementById('root')
-// );
-
 let data = new Data({
     object: 'person',
 })
 
-data.getAll().then(personList => { //почему работает getAll()
+data.getAll().then(personList => {
     persons.push(...personList);
 
     class Application extends React.Component {

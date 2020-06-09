@@ -1,6 +1,5 @@
 import { Person } from './Person.js';
 import React from 'react';
-import ReactDOM from 'react-dom';
 
 export class Student extends Person {
     constructor(props) {

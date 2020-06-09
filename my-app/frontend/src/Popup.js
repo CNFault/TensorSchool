@@ -1,4 +1,3 @@
-import ReactDOM from 'react-dom';
 import React from 'react';
 
 export class Popup extends React.Component {
@@ -9,12 +8,7 @@ export class Popup extends React.Component {
         }
     }
 
-    // componentDidUpdate() {
-    //     if (!this.state.show)
-    //         this.setState({ show: true })
-    // }
-
-    componentDidMount() {
+    componentWillReceiveProps() { //getDerivedStateFromProps
         if (!this.state.show)
             this.setState({ show: true })
     }
@@ -31,7 +25,7 @@ export class Popup extends React.Component {
                     <div>
                         <img className="minImg" src={this.props.user.photoUrl} alt="Аватар" title="Аватар" />
                     </div>
-                    <p>{this.props.user.status} </p><span title="Возраст">{this.props.user.age} лет</span>
+                    <p>{this.props.user.status} </p>{this.props.children || <span title="Возраст">{this.props.user.age} лет</span>}
                 </div>
             </div>
         )
