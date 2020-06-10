@@ -72,22 +72,39 @@ header p {
 	box-shadow: 5px 5px 3px 1px rgba(50, 50, 50, 0.75);
 }
 
-.close {
-	margin-left: auto;
+.popup_close {
+	display: block;
+	height: 27px;
 	width: 30px;
+	margin-left: auto;
 	color: black;
 	font-size: 28px;
 	font-weight: bold;
 }
 
-.close:hover {
+.popup_edit {
+	display: block;
+	height: 27px;
+	width: 30px;
+	margin-left: auto;
+	color: black;
+	font-size: 28px;
+	font-weight: bold;
+}
+
+.popup_close:hover {
+	color: wheat;
+	text-decoration: none;
+	cursor: pointer;
+}
+
+.popup_edit:hover {
 	color: wheat;
 	text-decoration: none;
 	cursor: pointer;
 }
 
 div.popup{
-	display: none;
 	position: fixed;
 	top: 0;
 	right: 0;
@@ -102,7 +119,7 @@ div.popup{
 }
 
 .minImg {
-	width:120px;
+	width: 120px;
 	height: 120px; 
 	object-fit: cover; 
 }

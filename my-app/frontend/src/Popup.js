@@ -14,12 +14,12 @@ export default function Popup(props) {
         return (
             <div className="popup" style={{ display: "block" }}>
                 <div>
-                    <span className="close" onClick={() => setPopup({ editMode: false, show: false })}>&times;</span>
+                    <span className="popup_close" onClick={() => setPopup({ editMode: false, show: false })}>&times;</span>
                 </div>
                 <div className="content">
                     <EditForm
                         person={popup.person}
-                        close={() => setPopup({ editMode: false })}
+                        popup_close={() => setPopup({ editMode: false })}
                         submit={person => {
                             updatePerson(person)
                             setPopup({ editMode: false, show: false })
@@ -33,8 +33,9 @@ export default function Popup(props) {
     return (
         <div className="popup" style={{ display: "block" }}>
             <div>
-                <span className="close" onClick={() => setPopup({ show: false })}>&times;</span>
-                <span className="close" onClick={() => setPopup({ editMode: true })}>✎</span>
+
+                <span className="popup_close" onClick={() => setPopup({ show: false })}>&times;</span>
+                <span className="popup_edit" onClick={() => setPopup({ editMode: true })}>✎</span>
             </div>
             <div className="content">
                 <div>

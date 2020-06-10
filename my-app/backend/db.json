@@ -2,17 +2,17 @@
   "person": [
     {
       "id": 1,
-      "name": "Алексей",
+      "name": "Андрей",
       "type": "Студент",
       "surname": "Шипелкин",
       "photoUrl": "img/ava01.jpg",
       "study": "НГТУ",
       "birthYear": 1990,
-      "course": 3,
+      "course": "45",
       "expirience": null,
       "position": null,
       "age": 30,
-      "fullName": "Алексей Шипелоокин"
+      "fullName": "Андрей Шипелкин"
     },
     {
       "id": 2,
@@ -22,7 +22,7 @@
       "photoUrl": "img/ava02.jpg",
       "study": "НГТУ",
       "birthYear": 1995,
-      "course": "7",
+      "course": "75",
       "expirience": null,
       "position": null,
       "age": 25,
