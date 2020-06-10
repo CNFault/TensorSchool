@@ -13,9 +13,6 @@ export default function Popup({ popupState }) {
 	if (popupState.editMode) {
 		return (
 			<div className="popup" style={{ display: "block" }}>
-				{/* <div>
-					<span className="popup_close" onClick={() => popupDispatch({ type: "CLOSE" })}>&times;</span>
-				</div> */}
 				<div className="content">
 					<EditForm
 						person={popupState.person}

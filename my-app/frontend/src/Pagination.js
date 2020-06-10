@@ -12,8 +12,7 @@ export default function Pagination({ pagination, setPage }) {
 			cursor: 'pointer'
 		},
 		selected: {
-			color: 'white',
-			backgroundColor: 'black'
+			border: '1px solid black'
 		}
 	}
 

@@ -11,7 +11,7 @@ function EditForm(props) {
 
 
 
-			<h1 className="form_title">Изменение данных студента</h1>
+			<h1 className="form_title">Изменение данных</h1>
 
 			<div className="form_space">
 				<input className="form_input" placeholder=" " value={person.name} onChange={e => setPerson({ ...person, name: e.target.value })} />
