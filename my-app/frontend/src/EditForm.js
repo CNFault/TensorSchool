@@ -9,21 +9,27 @@ function EditForm(props) {
 			props.submit(person)
 		}}>
 
+
+
 			<h1 className="form_title">Изменение данных студента</h1>
 
 			<div className="form_space">
 				<input className="form_input" placeholder=" " value={person.name} onChange={e => setPerson({ ...person, name: e.target.value })} />
-				<label className="form_label">Введите фамилию</label>
-			</div>
-
-			<div className="form_space">
-				<input className="form_input" placeholder=" " value={person.surname} onChange={e => setPerson({ ...person, surname: e.target.value })} />
 				<label className="form_label">Введите имя</label>
 			</div>
 
 			<div className="form_space">
-				<input className="form_input" placeholder=" " value={person.course} onChange={e => setPerson({ ...person, course: e.target.value })} />
+				<input className="form_input" placeholder=" " value={person.surname} onChange={e => setPerson({ ...person, surname: e.target.value })} />
+				<label className="form_label">Введите фамилию</label>
+			</div>
+
+			<div className="form_space">
+				<input className="form_input" disabled={person.type === 'Преподаватель'} placeholder=" " value={person.course} onChange={e => setPerson({ ...person, course: e.target.value })} />
 				<label className="form_label">Введите курс</label>
+			</div>
+			<div className="form_space">
+				<input className="form_input" placeholder=" " value={person.age} onChange={e => setPerson({ ...person, age: e.target.value })} />
+				<label className="form_label">Введите возраст</label>
 			</div>
 			<div className="form_button_wraper">
 				<button type="submit" className="form_button">Сохранить</button>

@@ -8,25 +8,27 @@
       "photoUrl": "img/ava01.jpg",
       "study": "НГТУ",
       "birthYear": 1990,
-      "course": "45",
+      "course": "4",
       "expirience": null,
       "position": null,
       "age": 30,
-      "fullName": "Андрей Шипелкин"
+      "fullName": "Андрей1 Шипелкин",
+      "status": "Студент, 45 курс"
     },
     {
       "id": 2,
-      "name": "Мария",
+      "name": "Марина",
       "surname": "Фёдорова",
       "type": "Студент",
       "photoUrl": "img/ava02.jpg",
       "study": "НГТУ",
       "birthYear": 1995,
-      "course": "75",
+      "course": "53",
       "expirience": null,
       "position": null,
       "age": 25,
-      "fullName": "Мария Фёдорова"
+      "fullName": "Марина Фёдорова",
+      "status": "Студент, 5 курс"
     },
     {
       "id": 3,
@@ -37,8 +39,8 @@
       "birthYear": 1993,
       "expirience": 7,
       "position": "Доцент",
-      "age": 27,
-      "fullName": "Кристина Сидорова"
+      "age": "555п",
+      "fullName": "Кристина Сидорова5"
     },
     {
       "id": 4,
@@ -61,8 +63,9 @@
       "course": 3,
       "expirience": null,
       "position": null,
-      "age": 25,
-      "fullName": "Марина Алексеевна"
+      "age": "233",
+      "fullName": "Марина Алексеева",
+      "status": "Студент, 3 курс"
     },
     {
       "id": 6,
@@ -75,6 +78,87 @@
       "course": 5,
       "expirience": null,
       "position": null
+    },
+    {
+      "id": 7,
+      "name": "Владимир",
+      "type": "Студент",
+      "surname": "Гончаров",
+      "photoUrl": "img/ava01.jpg",
+      "study": "НГТУ",
+      "birthYear": 1990,
+      "course": "1",
+      "expirience": null,
+      "position": null,
+      "age": 30,
+      "fullName": "Андрей Шипелкин",
+      "status": "Студент, 1 курс"
+    },
+    {
+      "id": 8,
+      "name": "Мария",
+      "surname": "Фёдорова",
+      "type": "Студент",
+      "photoUrl": "img/ava02.jpg",
+      "study": "НГТУ",
+      "birthYear": 1995,
+      "course": "3",
+      "expirience": null,
+      "position": null,
+      "age": 25,
+      "fullName": "Мария Фёдорова",
+      "status": "Студент, 75 курс"
+    },
+    {
+      "id": 9,
+      "name": "Кристина",
+      "surname": "Сидорова",
+      "type": "Преподаватель",
+      "photoUrl": "img/ava03.jpg",
+      "birthYear": 1993,
+      "expirience": 7,
+      "position": "Доцент",
+      "age": 27,
+      "fullName": "Кристина Сидорова"
+    },
+    {
+      "id": 10,
+      "name": "Андрей",
+      "surname": "Молотов",
+      "type": "Преподаватель",
+      "photoUrl": "img/ava04.jpg",
+      "birthYear": 1995,
+      "expirience": 5,
+      "position": "Профессор"
+    },
+    {
+      "id": 11,
+      "name": "Марина",
+      "type": "Студент",
+      "surname": "Алексеева",
+      "photoUrl": "img/ava05.jpg",
+      "study": "НГТУ",
+      "birthYear": 1995,
+      "course": 3,
+      "expirience": null,
+      "position": null,
+      "age": 25,
+      "fullName": "Марина Алексеевна"
+    },
+    {
+      "id": 12,
+      "name": "Николай",
+      "type": "Студент",
+      "surname": "Дроздов",
+      "photoUrl": "img/ava06.jpg",
+      "study": "НГТУ",
+      "birthYear": 1991,
+      "course": "6",
+      "expirience": null,
+      "position": null,
+      "age": 29,
+      "fullName": "Николай Дроздов",
+      "status": "Студент, 5 курс"
     }
   ]
 }

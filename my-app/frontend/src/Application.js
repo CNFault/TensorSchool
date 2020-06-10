@@ -1,63 +1,21 @@
-import React, { useEffect } from 'react'
+import React from 'react'
 import Context from './Context'
 import School from './School'
 import Popup from './Popup'
-import Data from './Data'
+import Pagination from './Pagination'
 
-const DB = Data.create({ object: 'person' })
+import { usePagination, usePersons, usePopup } from './UserHooks'
 
 export default function App() {
-	const [state, setState] = React.useState({
-		persons: [],
+	const [pagination, setPage] = usePagination('person') // передаем по какой модели хотим сделать пагинацию
+	const [persons, updatePerson] = usePersons(pagination.current)
+	const [popupState, popupDispatch] = usePopup() // деструктуризация
 
-		popup: {
-			show: false,
-			editMode: false,
-			person: null,
-			children: null
-		},
-
-		setPopup(data) {
-			setState(state => ({
-				...state,
-				popup: {
-					...state.popup,
-					...data
-				}
-			}))
-		},
-
-		updatePerson(person) {
-			setState(state => {
-				const { persons } = state
-
-				Object.assign( // обновляем локально
-					persons.find(x => x.id === person.id),
-					person
-				)
-
-				DB.update(person) //отправляем изменения на сервер
-
-				return {
-					...state,
-					persons
-				}
-			})
-		}
-	})
-
-	useEffect(() => { //реализует хуки жизненного цикла
-		DB.getAll()
-			.then(persons => setState({
-				...state,
-				persons
-			}))
-	}, []) //загружаем БД только 1 раз
-
-	return (
-		<Context.Provider value={state}>
-			<School />
-			<Popup />
+	return ( /*контекст - props доступный для всего дочернего элемента, обеспечивает доступ к каким либо параметрам отовсюду*/
+		<Context.Provider value={{ popupDispatch, updatePerson }}>  {/*то что доджно быть доступно везде*/}
+			<School persons={persons} /> {/*передаем персон, которые будут динамически обновляться за счет useEffect*/}
+			<Pagination pagination={pagination} setPage={setPage} />
+			<Popup popupState={popupState} />
 		</Context.Provider>
 	)
 }
