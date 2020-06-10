@@ -18,10 +18,10 @@ export default class Person extends React.Component {
 	}
 
 	handlerClick(children = null) {
-		this.context.popupDispatch({ // передаем что хотим сделать с popup. Объект называется action
+		this.context.popupDispatch({
 			type: "OPEN",
 			person: this.state,
-			children //опциональный контент
+			children
 		})
 	}
 

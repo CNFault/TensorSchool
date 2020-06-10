@@ -7,13 +7,13 @@ import Pagination from './Pagination'
 import { usePagination, usePersons, usePopup } from './UserHooks'
 
 export default function App() {
-	const [pagination, setPage] = usePagination('person') // передаем по какой модели хотим сделать пагинацию
+	const [pagination, setPage] = usePagination('person')
 	const [persons, updatePerson] = usePersons(pagination.current)
-	const [popupState, popupDispatch] = usePopup() // деструктуризация
+	const [popupState, popupDispatch] = usePopup()
 
-	return ( /*контекст - props доступный для всего дочернего элемента, обеспечивает доступ к каким либо параметрам отовсюду*/
-		<Context.Provider value={{ popupDispatch, updatePerson }}>  {/*то что доджно быть доступно везде*/}
-			<School persons={persons} /> {/*передаем персон, которые будут динамически обновляться за счет useEffect*/}
+	return (
+		<Context.Provider value={{ popupDispatch, updatePerson }}>
+			<School persons={persons} />
 			<Pagination pagination={pagination} setPage={setPage} />
 			<Popup popupState={popupState} />
 		</Context.Provider>

@@ -5,7 +5,7 @@ function EditForm(props) {
 
 	return (
 		<form className="form" onSubmit={e => {
-			e.preventDefault() //отменяем стандартную обработку события
+			e.preventDefault()
 			props.submit(person)
 		}}>
 

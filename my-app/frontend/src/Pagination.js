@@ -16,8 +16,7 @@ export default function Pagination({ pagination, setPage }) {
 		}
 	}
 
-	const pages = Array(pagination.total).fill(null).map((_, i) => i + 1) //генерирует массив чисел от 1 до количества страниц которое
-	//должно быть
+	const pages = Array(pagination.total).fill(null).map((_, i) => i + 1)
 
 	return (
 		<div style={styles.wrapper}>
@@ -28,8 +27,7 @@ export default function Pagination({ pagination, setPage }) {
 					Object.assign(style, styles.selected)
 				}
 
-				return <div style={style} onClick={() => setPage(page)} key={page}>{page}</div> //setPage из getPagination (userHooks.js)
-				//приводит к загрузке новой страницы и новых пользователей
+				return <div style={style} onClick={() => setPage(page)} key={page}>{page}</div>
 			})}
 		</div>
 	)
