@@ -1,8 +1,7 @@
-function getMouse (element) {
+function getMouse(element) {
     const mouse = {
         x: 0,
         y: 0,
-        s: false,
         left: false,
         pleft: false
     }
@@ -11,10 +10,6 @@ function getMouse (element) {
         const rect = element.getBoundingClientRect()
         mouse.x = event.clientX - rect.left
         mouse.y = event.clientY - rect.top
-    })
-
-    element.addEventListener('wheel', function (event) {
-        mouse.s = !mouse.s
     })
 
     element.addEventListener("mousedown", function (event) {

@@ -4,6 +4,10 @@ const FIELD_SIZE = 30
 const canvas = document.querySelector('canvas')
 const context = canvas.getContext('2d')
 
+
+context.font = "30px Arial";
+context.fillText("Hello World", 10, 50);
+
 canvas.width = 1000
 canvas.height = 500
 
@@ -14,7 +18,15 @@ function clearCanvas() {
     canvas.width |= 0
 }
 
-// game.player.randoming()
+function addLegends() {
+    const playerName = prompt('Введите имя игрока');
+    const computerName = prompt('Дайте имя компьютеру');
+
+    context.font = "30px Arial";
+    context.fillText(playerName, 120, 450);
+    context.fillText(computerName, 650, 450);
+    context.fillText("Морской бой", 330, 100);
+}
 
 
 function drawGrid() {

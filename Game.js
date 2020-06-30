@@ -15,25 +15,23 @@ class Game {
         })
 
         this.computer.randoming()
+        this.player.randoming()
 
         requestAnimationFrame(x => this.tick(x))
     }
 
-    tick(timestamp) {
+    tick() {
         requestAnimationFrame(x => this.tick(x))
 
         clearCanvas()
         drawGrid()
 
+
         this.player.draw(context)
         this.computer.draw(context)
 
-        // if (this.stage === "preparation") {
-        //     this.tickPreparation(timestamp)
-        // }
-
         if (this.stage === "play") {
-            this.tickPlay(timestamp)
+            this.tickPlay()
 
             if (this.computer.isEnd()) {
                 this.stage = 'end'
@@ -49,38 +47,8 @@ class Game {
         mouse.pleft = mouse.left
     }
 
-    tickPreparation(timestamp) {
-        if (!this.player.isPointUnder(mouse)) {
-            return
-        }
+    tickPlay() {
 
-        const sheepSizes = [4, 3, 3, 2, 2, 2, 1, 1, 1, 1]
-        const sheepSize = sheepSizes[this.player.sheeps.length]
-        const coordinats = this.player.getCoordinats(mouse)
-
-        const sheep = {
-            x: coordinats.x,
-            y: coordinats.y,
-            direct: mouse.s ? 0 : 1,
-            size: sheepSize
-        }
-
-        if (!this.player.canStay(sheep)) {
-            return
-        }
-
-        this.player.drawSheep(context, sheep)
-
-        if (mouse.left && !mouse.pleft) {
-            this.player.addSheeps(sheep)
-
-            if (this.player.sheeps.length === 10) {
-                this.stage = "play"
-            }
-        }
-    }
-
-    tickPlay(timestamp) {
         if (this.playerOrder) {
             if (!this.computer.isPointUnder(mouse)) {
                 return
